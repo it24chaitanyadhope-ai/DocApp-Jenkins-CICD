@@ -1,0 +1,34 @@
+package com.example.Controller;
+// TEMPORARILY COMMENT OUT EVERYTHING
+/* 
+import com.example.DocApp.Model.Appointment;
+import com.example.Repository.AppointmentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/appointments")
+public class AppointmentController {
+
+    @Autowired
+    private AppointmentRepository appointmentRepository;
+
+    // Get all appointments
+    @GetMapping
+    public List<Appointment> getAllAppointments() {
+        return appointmentRepository.findAll();
+    }
+
+    // Get appointments for a specific doctor
+    @GetMapping("/doctor/{doctorId}")
+    public List<Appointment> getAppointmentsByDoctor(@PathVariable String doctorId) {
+        return appointmentRepository.findByDoctorId(doctorId);
+    }
+
+    // Book a new appointment
+    @PostMapping
+    public Appointment bookAppointment(@RequestBody Appointment appointment) {
+        return appointmentRepository.save(appointment);
+    }
+}*/
