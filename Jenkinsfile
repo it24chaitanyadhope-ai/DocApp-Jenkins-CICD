@@ -11,19 +11,19 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                bat 'set "JAVA_HOME=C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot" && set "PATH=%JAVA_HOME%\\bin;%PATH%" && mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test'
+                bat 'set "JAVA_HOME=C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot" && set "PATH=%JAVA_HOME%\\bin;%PATH%" && mvn test'
             }
         }
 
         stage('Package') {
             steps {
-                bat 'mvn package -DskipTests'
+                bat 'set "JAVA_HOME=C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot" && set "PATH=%JAVA_HOME%\\bin;%PATH%" && mvn package -DskipTests'
             }
         }
 
